@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Love Jesus</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+  .w3-sidebar a {font-family: "Roboto", sans-serif}
+  body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
+  .mySlides {display: none;}
+  .w3-tag, .fa {cursor: pointer;} 
+  .w3-tag {height: 15px;width:15 px;padding: 0;margin-top: 6px;}
+  p {text-indent: 0px;text-transform: none;border: 0px solid black;margin-top: 0px;margin-bottom: 10px;margin-right: 80px;margin-left: 80px;background-color: none;font-size: 21px;}
+  section {color: black;text-transform: none;border: 0px solid black;margin-right: 100px;margin-left: 80px;background-color: none;font-size: 21px;}
+  i {color: red;}
+  .mySlides {font-style:italic;font-size:20px;text-align:center;}
+  .palabras {font-style:italic;font-size:20px;text-align:center;}
+  h1 { text-align: center;}
+  h2 {text-align: left; font-size: 17px; color: red;}
+  h3  {text-align: right;}
+  h4 {text-align: center;}
+  h5 {text-align: center; color: red;}
+  </style>
+  
+  
+</head>
+<script>
+// Function to load HTML into an element
+function includeHTML(id, file) {
+    fetch(file)
+        .then(response => {
+            if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+            return response.text();
+        })
+        .then(data => {
+            document.getElementById(id).innerHTML = data;
+        })
+        .catch(err => {
+            console.error('Error loading HTML:', err);
+        });
+}
+
+// Load header and footer
+includeHTML("mysteries", "html/mysteries.html");
+includeHTML("occult", "html/01-occult.html");
+includeHTML("children", "html/02-wholeness_in_marriage.html");
+includeHTML("marriage", "html/03-healing_the_children.html");
+includeHTML("protection", "html/protection.html");
+includeHTML("sexual", "html/04-sexual_healing.html");
+includeHTML("mental", "html/05-mental_health.html");
+includeHTML("fears", "html/06-fears.html");
+includeHTML("compulsive", "html/07-healing_compulsive.html");
+includeHTML("diseases", "html/08-healing_all_the_diseases.html");
+includeHTML("crimes", "html/09-crimes.html");
+includeHTML("lovers", "html/10-lovers_not_haters.html");
+includeHTML("tender", "html/11-a_tender_loving_care.html");
+includeHTML("family", "html/12-make_us_a_family.html");
+includeHTML("slavery", "html/13-slavery.html");
+includeHTML("serving", "html/14-serving.html");
+includeHTML("ax", "html/16-ax.html");
+includeHTML("tounge", "html/15-healing_the_tounge.html");
+includeHTML("rebellion", "html/17-rebellion.html");
+includeHTML("barbarism", "html/18-barbarism.html");
+includeHTML("gluttony", "html/19-gluttony.html");
+includeHTML("conflict", "html/20-family_conflict.html");
+includeHTML("pio", "html/pio.html");
+includeHTML("ncreed", "html/nicene.html");
+includeHTML("siete", "html/siete_palabras.html");
+includeHTML("acreed", "html/apostle.html");
+includeHTML("deliverance", "html/deliverance.html");
+includeHTML("apostle", "html/apostle.html");
+includeHTML("siete", "html/siete_palabras.html");
+
+
+
+
+
+// <div w3-include-html=“/html/mysteries.html"></div>
+</script>
+
+<body class="w3-content" style="max-width:1200px">
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3;width:250px" id="mySidebar">
+  <div class="w3-container w3-display-container w3-padding-16">
+    <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
+    <h3 class="w3-wide"><b>Life of Jesus and Mary</b></h3>
+  </div>
+  
+   <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold">
+    <!-- 
+<a href="#home" class="w3-bar-item w3-button">Home</a>
+      <a href="#rosary" class="w3-bar-item w3-button">Rosary</a>
+    
+ --> <a href="#protection" class="w3-bar-item w3-button">Prayer for Protection</a>
+      <a href="#siete" class="w3-bar-item w3-button">Siete Palabra</a>
+       <a href="#deliverance" class="w3-bar-item w3-button">Deliverance</a>
+     <a onclick="myAccFunc()" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
+       Sin and Trauma <i class="fa fa-caret-down"></i>
+     </a>
+     <div id="demoAcc" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+     
+     
+     <!-- 
+   <a href="#" class="w3-bar-item w3-button w3-light-grey"><i class="fa fa-caret-right w3-margin-right"></i>Sins Trauma</a>
+     
+  -->  
+       <a href="#occult" class="w3-bar-item w3-button">Occult</a>
+       <a href="#marriage" class="w3-bar-item w3-button">Wholeness Marriage</a>
+       <a href="#children" class="w3-bar-item w3-button">Healing the Children</a>
+       <a href="#sexual" class="w3-bar-item w3-button">Sexual Healing</a>
+       <a href="#mental" class="w3-bar-item w3-button">Mental Health</a>
+       <a href="#fears" class="w3-bar-item w3-button">Fears</a>
+       <a href="#compulsive" class="w3-bar-item w3-button">Healing Compulsive</a>
+       <a href="#diseases" class="w3-bar-item w3-button">Healing all the diseases</a>
+       <a href="#crimes" class="w3-bar-item w3-button">Crimes</a>
+       <a href="#lovers" class="w3-bar-item w3-button">Lovers Not Haters</a>
+       <a href="#tender" class="w3-bar-item w3-button">A Tender Loving Care</a>
+       <a href="#family" class="w3-bar-item w3-button">Make Us A Family</a>
+       <a href="#slavery" class="w3-bar-item w3-button">Slavery</a>
+       <a href="#serving" class="w3-bar-item w3-button">Serving Only One God</a>
+       <a href="#tounge" class="w3-bar-item w3-button">Healing the Tounge</a>
+       <a href="#ax" class="w3-bar-item w3-button">Ax to the Foot</a>
+       <a href="#rebellion" class="w3-bar-item w3-button">Rebellion</a>
+       <a href="#barbarism" class="w3-bar-item w3-button">Barbarism</a>
+       <a href="#gluttony" class="w3-bar-item w3-button">Gluttony</a>
+       <a href="#conflict" class="w3-bar-item w3-button">Family Conflict</a>
+       </div>
+     <!-- <a href="#occult" class="w3-bar-item w3-button"></a> -->
+     <a href="#mysteries" class="w3-bar-item w3-button">Mysteries</a>
+     <a href="#acreed" class="w3-bar-item w3-button">Apostle Creed</a>
+     <a href="#ncreed" class="w3-bar-item w3-button">Nicene Creed</a>
+     <a href="#pio" class="w3-bar-item w3-button">Prayer of Fr. Pio</a>
+   </div>
+ 
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-bar w3-top w3-hide-large w3-black w3-xlarge">
+  <div class="w3-bar-item w3-padding-24 w3-wide">Life of Jesus and Mary</div>
+  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:250px">
+
+  <!-- Push down content on small screens -->
+  <div class="w3-hide-large" style="margin-top:83px"></div>
+  
+  <!-- Top header -->
+  <header class="w3-container w3-xlarge">
+    <p class="w3-left"></p>
+    <p class="w3-right"></p>
+    <!--   <i class="fa fa-shopping-cart w3-margin-right"></i>
+      <i class="fa fa-search"></i>
+     -->  
+ 
+</header>
+
+<div class="w3-container w3-padding-32" id="home">
+    <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16"></h1>
+  </div>
+
+
+  <div class="w3-container w3-padding-32" id="mysteries">
+    <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16"></h1>
+  </div>
+<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
+<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
+<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
+
+  <div class="w3-container w3-padding-32" id="occult">
+    <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16">Occult</h1>
+  </div>
+
+
+<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
+<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
+<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
+
+   <div class="w3-container w3-padding-32" id="marriage">
+    <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16">Wholeness of Marriage</h1>
+  </div>
+  
+ 
+<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
+<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
+ <BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
+       
+    <div class="w3-container w3-padding-32" id="children">
+      <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16">Healing the Children</h1>
+    </div>
+  
+<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
+<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
+<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
+
+    <div class="w3-container w3-padding-32" id="sexual">
+      <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16">Sexual Healing</h1>
+    </div>
+
+    
+        
+<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
+<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
+<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
+
+<div class="w3-container w3-padding-32" id="mental">
+      <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16">Mental Health</h1>
+    </div><div w3-include-html="html/05-mental_health.html"></div>
+  BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
+<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
+<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
+
+     
+    <div class="w3-container w3-padding-32" id="fears">
+      <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16">Fears</h1>
+    </div>
+   <BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
+   <BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
+  
+    <div class="w3-container w3-padding-32" id="compulsive">
+      <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16">Healing Compulsive</h1>
+    </div>
+   <BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
+   <BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
+   <BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
+
+     <div class="w3-container w3-padding-32" id="diseases">
+      <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16">Healing all the diseases</h1>
+    </div>
+<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
+<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
+<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
+
+    <div class="w3-container w3-padding-32" id="crimes">
+      <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16">Crimes</h1>
+    </div>
+    
+<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
+<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
+<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
+
+<div class="w3-container w3-padding-32" id="lovers">
+      <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16">Lovers Not Haters</h1>
+    </div>
+ <BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
+<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
+<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
+
+ <div class="w3-container w3-padding-32" id="tender">
+          <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16">A Tender Loving Care</h1>
+        </div>
+ <BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
+<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
+<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
+
+          <div class="w3-container w3-padding-32" id="family">
+            <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16">Make Us A Family</h1>
+          </div>
+ 
+         
+<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
+<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
+<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
+
+          <div class="w3-container w3-padding-32" id="slavery">
+            <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16">Slavery</h1>
+          </div>
+
+<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
+<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
+<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>            
+           
+
+            <div class="w3-container w3-padding-32" id="serving">
+              <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16">Serving Only One God</h1>
+            </div>
+           
+<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
+<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
+<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>            
+
+
+<div class="w3-container w3-padding-32" id="tounge">
+              <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16">Healing the Tounge</h1>
+            </div>
+         
+<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
+<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
+<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>            
+
+ <div class="w3-container w3-padding-32" id="ax">
+              <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16">Ax to the Foot</h1>
+            </div>
+        
+<?php include '16-ax.php';?>
+<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
+<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
+<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>            
+           
+   <div class="w3-container w3-padding-32" id="rebellion">
+              <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16">Rebellion</h1>
+            </div>
+ 
+<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
+<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
+<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
+
+
+             <div class="w3-container w3-padding-32" id="barbarism">
+              <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16">Barbarism</h1>
+            </div>
+
+<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
+<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
+<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
+            
+            
+              <div class="w3-container w3-padding-32" id="gluttony">
+                <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16">Gluttony</h1>
+              </div>
+        
+<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
+<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
+<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
+
+<div class="w3-container w3-padding-32" id="conflict">
+                  <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16">Family Conflict</h1>
+                </div>
+                
+<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
+<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
+<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
+
+  <div class="w3-container w3-padding-32" id="ncreed">
+    <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16">Nicene Creed</h1>
+  </div>
+
+<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
+<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
+<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
+
+ <div class="w3-container w3-padding-32" id="acreed">
+      <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16">Apostle Creed</h1>
+    </div>
+
+<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
+<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
+<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
+
+<div class="w3-container w3-padding-32" id="siete">
+      <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16">Siete Palabras</h1>
+    </div>
+<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
+<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
+<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
+
+
+  <div class="w3-container w3-padding-32" id="protection">
+    <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16">Prayer for Protection</h1>
+  </div>
+
+<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
+<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
+<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
+
+<div class="w3-container w3-padding-32" id="deliverance">
+    <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16">Deliverance</h1>
+  </div>
+
+<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
+<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
+<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
+
+<div class="w3-container w3-padding-32" id="pio">
+    <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16">Prayer by Fr. Pio</h1>
+  </div>
+
+<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
+<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
+<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
+
+          
+
+<div class="w3-container w3-padding-32" id="rosary">
+    <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16">Rosary</h1>
+  </div>
+<script>
+// Accordion 
+function myAccFunc() {
+  var x = document.getElementById("demoAcc");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+// Click on the "Jeans" link on page load to open the accordion for demo purposes
+document.getElementById("myBtn").click();
+
+
+// Open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+</script>
+
+
+</body>
+</html>
