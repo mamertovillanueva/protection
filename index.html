@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Love Jesus</title>
+<title>Life of Jesus and Mary</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
@@ -29,58 +29,36 @@
   
 </head>
 <script>
-// Function to load HTML into an element
-function includeHTML(id, file) {
-    fetch(file)
-        .then(response => {
-            if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
-            return response.text();
-        })
-        .then(data => {
-            document.getElementById(id).innerHTML = data;
-        })
-        .catch(err => {
-            console.error('Error loading HTML:', err);
-        });
-}
-
-// Load header and footer
-includeHTML("mysteries", "html/mysteries.html");
-includeHTML("occult", "html/01-occult.html");
-includeHTML("children", "html/02-wholeness_in_marriage.html");
-includeHTML("marriage", "html/03-healing_the_children.html");
-includeHTML("protection", "html/protection.html");
-includeHTML("sexual", "html/04-sexual_healing.html");
-includeHTML("mental", "html/05-mental_health.html");
-includeHTML("fears", "html/06-fears.html");
-includeHTML("compulsive", "html/07-healing_compulsive.html");
-includeHTML("diseases", "html/08-healing_all_the_diseases.html");
-includeHTML("crimes", "html/09-crimes.html");
-includeHTML("lovers", "html/10-lovers_not_haters.html");
-includeHTML("tender", "html/11-a_tender_loving_care.html");
-includeHTML("family", "html/12-make_us_a_family.html");
-includeHTML("slavery", "html/13-slavery.html");
-includeHTML("serving", "html/14-serving.html");
-includeHTML("ax", "html/16-ax.html");
-includeHTML("tounge", "html/15-healing_the_tounge.html");
-includeHTML("rebellion", "html/17-rebellion.html");
-includeHTML("barbarism", "html/18-barbarism.html");
-includeHTML("gluttony", "html/19-gluttony.html");
-includeHTML("conflict", "html/20-family_conflict.html");
-includeHTML("pio", "html/pio.html");
-includeHTML("ncreed", "html/nicene.html");
-includeHTML("siete", "html/siete_palabras.html");
-includeHTML("acreed", "html/apostle.html");
-includeHTML("deliverance", "html/deliverance.html");
-includeHTML("apostle", "html/apostle.html");
-includeHTML("siete", "html/siete_palabras.html");
-
-
-
-
+function includeHTML() {
+  var z, i, elmnt, file, xhttp;
+  /*loop through a collection of all HTML elements:*/
+  z = document.getElementsByTagName("*");
+  for (i = 0; i < z.length; i++) {
+    elmnt = z[i];
+    /*search for elements with a certain attribute:*/
+    file = elmnt.getAttribute("w3-include-html");
+    if (file) {
+      /*make an HTTP request using the attribute value as the file name:*/
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+          /*remove the attribute, and call this function once more:*/
+          elmnt.removeAttribute("w3-include-html");
+          includeHTML();
+        }
+      }      
+      xhttp.open("GET", file, true);
+      xhttp.send();
+      /*exit the function:*/
+      return;
+    }
+  }
+};
+</script>
 
 // <div w3-include-html=“/html/mysteries.html"></div>
-</script>
 
 <body class="w3-content" style="max-width:1200px">
 
@@ -96,9 +74,10 @@ includeHTML("siete", "html/siete_palabras.html");
 <a href="#home" class="w3-bar-item w3-button">Home</a>
       <a href="#rosary" class="w3-bar-item w3-button">Rosary</a>
     
- --> <a href="#protection" class="w3-bar-item w3-button">Prayer for Protection</a>
+ --> 
+      <a href="#protection" class="w3-bar-item w3-button">Prayer for Protection</a>
       <a href="#siete" class="w3-bar-item w3-button">Siete Palabra</a>
-       <a href="#deliverance" class="w3-bar-item w3-button">Deliverance</a>
+     <a href="#deliverance" class="w3-bar-item w3-button">Deliverance</a>
      <a onclick="myAccFunc()" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
        Sin and Trauma <i class="fa fa-caret-down"></i>
      </a>
@@ -166,227 +145,146 @@ includeHTML("siete", "html/siete_palabras.html");
 
 <div class="w3-container w3-padding-32" id="home">
     <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16"></h1>
-  </div>
-
+  </div><div w3-include-html="html/protection.html">Prayer for Protection</div>
 
   <div class="w3-container w3-padding-32" id="mysteries">
-    <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16"></h1>
-  </div>
-<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
-<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
-<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
+    <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16">Mysteries</h1>
+  </div><div w3-include-html="html/mysteries.html"></div>
+  
 
   <div class="w3-container w3-padding-32" id="occult">
     <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16">Occult</h1>
-  </div>
-
-
-<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
-<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
-<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
+  </div><div w3-include-html="html/01-occult.html"></div>
 
    <div class="w3-container w3-padding-32" id="marriage">
     <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16">Wholeness of Marriage</h1>
-  </div>
+  </div><div w3-include-html="html/02-wholeness_in_marriage.html"></div>
   
- 
-<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
-<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
- <BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
        
     <div class="w3-container w3-padding-32" id="children">
       <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16">Healing the Children</h1>
-    </div>
+    </div><div w3-include-html="html/03-healing_the_children.html"></div>
   
-<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
-<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
-<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
 
     <div class="w3-container w3-padding-32" id="sexual">
       <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16">Sexual Healing</h1>
-    </div>
+    </div><div w3-include-html="html/04-sexual_healing.html"></div>
 
     
         
-<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
-<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
-<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
 
 <div class="w3-container w3-padding-32" id="mental">
       <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16">Mental Health</h1>
     </div><div w3-include-html="html/05-mental_health.html"></div>
-  BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
-<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
-<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
-
+  
      
     <div class="w3-container w3-padding-32" id="fears">
       <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16">Fears</h1>
-    </div>
-   <BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
-   <BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
+    </div><div w3-include-html="html/06-fears.html"></div>
   
     <div class="w3-container w3-padding-32" id="compulsive">
       <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16">Healing Compulsive</h1>
-    </div>
-   <BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
-   <BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
-   <BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
-
+    </div><div w3-include-html="html/07-healing_compulsive.html"></div>
+ 
      <div class="w3-container w3-padding-32" id="diseases">
       <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16">Healing all the diseases</h1>
-    </div>
-<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
-<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
-<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
+    </div><div w3-include-html="html/08-healing_all_the_diseases.html"></div>
 
     <div class="w3-container w3-padding-32" id="crimes">
       <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16">Crimes</h1>
-    </div>
-    
-<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
-<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
-<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
-
+    </div><div w3-include-html="html/09-crimes.html"></div>
+ 
 <div class="w3-container w3-padding-32" id="lovers">
       <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16">Lovers Not Haters</h1>
-    </div>
- <BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
-<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
-<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
+    </div><div w3-include-html="html/10-lovers_not_haters.html"></div>
 
  <div class="w3-container w3-padding-32" id="tender">
           <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16">A Tender Loving Care</h1>
-        </div>
- <BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
-<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
-<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
+        </div><div w3-include-html="html/11-a_tender_loving_care.html"></div>
 
           <div class="w3-container w3-padding-32" id="family">
             <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16">Make Us A Family</h1>
-          </div>
+          </div><div w3-include-html="html/12-make_us_a_family.html"></div>
  
          
-<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
-<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
-<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
 
           <div class="w3-container w3-padding-32" id="slavery">
             <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16">Slavery</h1>
-          </div>
+          </div><div w3-include-html="html/13-slavery.html"></div>
 
-<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
-<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
-<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>            
            
 
             <div class="w3-container w3-padding-32" id="serving">
               <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16">Serving Only One God</h1>
-            </div>
+            </div><div w3-include-html="html/14-serving.html"></div>
            
-<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
-<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
-<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>            
+
 
 
 <div class="w3-container w3-padding-32" id="tounge">
               <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16">Healing the Tounge</h1>
-            </div>
+            </div><div w3-include-html="html/15-healing_the_tounge.html"></div>
          
-<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
-<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
-<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>            
+
 
  <div class="w3-container w3-padding-32" id="ax">
               <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16">Ax to the Foot</h1>
-            </div>
+            </div><div w3-include-html="html/16-ax.html"></div>
         
-<?php include '16-ax.php';?>
-<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
-<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
-<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>            
+
+
            
    <div class="w3-container w3-padding-32" id="rebellion">
               <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16">Rebellion</h1>
-            </div>
+            </div><div w3-include-html="html/17-rebellion.html"></div>
  
-<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
-<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
-<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
 
 
              <div class="w3-container w3-padding-32" id="barbarism">
               <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16">Barbarism</h1>
-            </div>
+            </div><div w3-include-html="html/18-barbarism.html"></div>
 
-<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
-<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
-<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
             
             
               <div class="w3-container w3-padding-32" id="gluttony">
                 <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16">Gluttony</h1>
-              </div>
+              </div><div w3-include-html="html/19-gluttony.html"></div>
         
-<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
-<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
-<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
 
 <div class="w3-container w3-padding-32" id="conflict">
                   <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16">Family Conflict</h1>
-                </div>
+                </div><div w3-include-html="html/20-family_conflict.html"></div>
                 
-<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
-<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
-<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
 
   <div class="w3-container w3-padding-32" id="ncreed">
     <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16">Nicene Creed</h1>
-  </div>
+  </div><div w3-include-html="html/nicene.html"></div>
 
-<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
-<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
-<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
 
  <div class="w3-container w3-padding-32" id="acreed">
       <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16">Apostle Creed</h1>
-    </div>
+    </div><div w3-include-html="html/apostle.html"></div>
 
-<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
-<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
-<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
 
 <div class="w3-container w3-padding-32" id="siete">
       <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16">Siete Palabras</h1>
-    </div>
-<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
-<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
-<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
+    </div><div w3-include-html="html/siete_palabras.html"></div>
 
 
   <div class="w3-container w3-padding-32" id="protection">
     <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16">Prayer for Protection</h1>
-  </div>
+  </div><div w3-include-html="html/protection.html"></div>
 
-<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
-<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
-<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
 
 <div class="w3-container w3-padding-32" id="deliverance">
     <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16">Deliverance</h1>
-  </div>
+  </div><div w3-include-html="html/deliverance.html"></div>
 
-<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
-<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
-<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
 
 <div class="w3-container w3-padding-32" id="pio">
     <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16">Prayer by Fr. Pio</h1>
-  </div>
+  </div><div w3-include-html="html/pio.html"></div>
 
-<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
-<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
-<BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br><BR><br>
 
           
 
@@ -418,6 +316,10 @@ function w3_close() {
   document.getElementById("mySidebar").style.display = "none";
   document.getElementById("myOverlay").style.display = "none";
 }
+</script>
+
+<script>
+includeHTML();
 </script>
 
 
