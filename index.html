@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Life of Jesus and Mary</title>
+<title>Love Jesus</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
@@ -28,6 +28,36 @@
   
   
 </head>
+<script>
+function includeHTML() {
+  var z, i, elmnt, file, xhttp;
+  /* Loop through a collection of all HTML elements: */
+  z = document.getElementsByTagName("*");
+  for (i = 0; i < z.length; i++) {
+    elmnt = z[i];
+    /*search for elements with a certain atrribute:*/
+    file = elmnt.getAttribute("w3-include-html");
+    if (file) {
+      /* Make an HTTP request using the attribute value as the file name: */
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+          /* Remove the attribute, and call this function once more: */
+          elmnt.removeAttribute("w3-include-html");
+          includeHTML();
+        }
+      }
+      xhttp.open("GET", file, true);
+      xhttp.send();
+      /* Exit the function: */
+      return;
+    }
+  }
+}
+</script>
+
 <body class="w3-content" style="max-width:1200px">
 
 <!-- Sidebar/menu -->
@@ -38,14 +68,12 @@
   </div>
   
    <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold">
-    <!-- 
-<a href="#home" class="w3-bar-item w3-button">Home</a>
-      <a href="#rosary" class="w3-bar-item w3-button">Rosary</a>
+   <a href="slideshow.php" class="w3-bar-item w3-button">Home</a> 
+      
     
- --> 
-      <a href="protection.html" class="w3-bar-item w3-button">Prayer for Protection</a>
-      <a href="siete_palabras.html" class="w3-bar-item w3-button">Siete Palabra</a>
-     <a href="deliverance.html" class="w3-bar-item w3-button">Deliverance</a>
+ <a href="protection.html" class="w3-bar-item w3-button">Prayer for Protection</a>
+      <a href="siete_palabras.html" class="w3-bar-item w3-button">Siete Palabras</a>
+       <a href="deliverance.html" class="w3-bar-item w3-button">Deliverance</a>
      <a onclick="myAccFunc()" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
        Sin and Trauma <i class="fa fa-caret-down"></i>
      </a>
@@ -53,10 +81,10 @@
      
      
      <!-- 
-   <a href="#" class="w3-bar-item w3-button w3-light-grey"><i class="fa fa-caret-right w3-margin-right"></i>Sins Trauma</a>
+   <a href="" class="w3-bar-item w3-button w3-light-grey"><i class="fa fa-caret-right w3-margin-right"></i>Sins Trauma</a>
      
   -->  
-       <a href="01-occult.html" class="w3-bar-item w3-button">Occult</a>
+     <a href="01-occult.html" class="w3-bar-item w3-button">Occult</a>
        <a href="02-wholeness_in_marriage.html" class="w3-bar-item w3-button">Wholeness Marriage</a>
        <a href="03-healing_the_children.html" class="w3-bar-item w3-button">Healing the Children</a>
        <a href="04-sexual_healing.html" class="w3-bar-item w3-button">Sexual Healing</a>
@@ -111,6 +139,7 @@
  
 </header>
 <script>
+
 // Accordion 
 function myAccFunc() {
   var x = document.getElementById("demoAcc");
