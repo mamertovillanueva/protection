@@ -1,0 +1,169 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<title>Life of Jesus and Mary</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+  .w3-sidebar a {font-family: "Roboto", sans-serif}
+  body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
+  .mySlides {display: none;}
+  .w3-tag, .fa {cursor: pointer;} 
+  .w3-tag {height: 15px;width:15 px;padding: 0;margin-top: 6px;}
+  p {text-indent: 0px;text-transform: none;border: 0px solid black;margin-top: 0px;margin-bottom: 10px;margin-right: 80px;margin-left: 80px;background-color: none;font-size: 21px;}
+  section {color: black;text-transform: none;border: 0px solid black;margin-right: 100px;margin-left: 80px;background-color: none;font-size: 21px;}
+  i {color: red;}
+  .mySlides {font-style:italic;font-size:20px;text-align:center;}
+  .palabras {font-style:italic;font-size:20px;text-align:center;}
+  h1 { text-align: center;}
+  h2 {text-align: left; font-size: 17px; color: red;}
+  h3  {text-align: right;}
+  h4 {text-align: center;}
+  h5 {text-align: center; color: red;}
+  </style>
+  
+  
+</head>
+
+<body class="w3-content" style="max-width:1200px">
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3;width:250px" id="mySidebar">
+  <div class="w3-container w3-display-container w3-padding-16">
+    <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
+    <h3 class="w3-wide"><b>Life of Jesus and Mary</b></h3>
+  </div>
+  
+   <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold">
+    <!-- 
+<a href="#index.html" class="w3-bar-item w3-button">Home</a>
+      <a href="#rosary" class="w3-bar-item w3-button">Rosary</a>
+    
+ -->  <a href="index.html" class="w3-bar-item w3-button">Home</a> 
+      
+      <a href="29-slideshow.html" class="w3-bar-item w3-button">Bible Verse</a>
+      <a href="28-siete_palabras.html" class="w3-bar-item w3-button">Siete Palabra</a>
+     <a href="22-deliverance.html" class="w3-bar-item w3-button">Deliverance</a>
+     <a onclick="myAccFunc()" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
+       Sin and Trauma <i class="fa fa-caret-down"></i>
+     </a>
+     <div id="demoAcc" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+     
+     
+     <!-- 
+   <a href="#" class="w3-bar-item w3-button w3-light-grey"><i class="fa fa-caret-right w3-margin-right"></i>Sins Trauma</a>
+     
+  -->  
+       <a href="01-occult.html" class="w3-bar-item w3-button">Occult</a>
+       <a href="02-wholeness_in_marriage.html" class="w3-bar-item w3-button">Wholeness Marriage</a>
+       <a href="03-healing_the_children.html" class="w3-bar-item w3-button">Healing the Children</a>
+       <a href="04-sexual_healing.html" class="w3-bar-item w3-button">Sexual Healing</a>
+       <a href="05-mental_health.html" class="w3-bar-item w3-button">Mental Health</a>
+       <a href="06-fears.html" class="w3-bar-item w3-button">Fears</a>
+       <a href="07-healing_compulsive.html" class="w3-bar-item w3-button">Healing Compulsive</a>
+       <a href="08-healing_all_the_diseases.html" class="w3-bar-item w3-button">Healing all the diseases</a>
+       <a href="09-crimes.html" class="w3-bar-item w3-button">Crimes</a>
+       <a href="10-lovers_not_haters.html" class="w3-bar-item w3-button">Lovers Not Haters</a>
+       <a href="11-a_tender_loving_care.html" class="w3-bar-item w3-button">A Tender Loving Care</a>
+       <a href="12-make_us_a_family.html" class="w3-bar-item w3-button">Make Us A Family</a>
+       <a href="13-slavery.html" class="w3-bar-item w3-button">Slavery</a>
+       <a href="14-serving.html" class="w3-bar-item w3-button">Serving Only One God</a>
+       <a href="15-healing_the_tounge.html" class="w3-bar-item w3-button">Healing the Tounge</a>
+       <a href="16-ax.html" class="w3-bar-item w3-button">Ax to the Foot</a>
+       <a href="17-rebellion.html" class="w3-bar-item w3-button">Rebellion</a>
+       <a href="18-barbarism.html" class="w3-bar-item w3-button">Barbarism</a>
+       <a href="19-gluttony.html" class="w3-bar-item w3-button">Gluttony</a>
+       <a href="20-family_conflict.html" class="w3-bar-item w3-button">Family Conflict</a>
+       </div>
+     <!-- <a href="#occult" class="w3-bar-item w3-button"></a> -->
+     <a href="23-mysteries.html" class="w3-bar-item w3-button">Mysteries</a>
+     <a href="21-apostle.html" class="w3-bar-item w3-button">Apostle Creed</a>
+     <a href="25-nicene.html" class="w3-bar-item w3-button">Nicene Creed</a>
+     <a href="26-pio.html" class="w3-bar-item w3-button">Prayer of Fr. Pio</a>
+   </div>
+ 
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-bar w3-top w3-hide-large w3-black w3-xlarge">
+  <div class="w3-bar-item w3-padding-24 w3-wide">Life of Jesus and Mary</div>
+  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:250px">
+
+  <!-- Push down content on small screens -->
+  <div class="w3-hide-large" style="margin-top:83px"></div>
+  
+  <!-- Top header -->
+  <header class="w3-container w3-xlarge">
+    <p class="w3-left"></p>
+    <p class="w3-right"></p>
+    <!--   <i class="fa fa-shopping-cart w3-margin-right"></i>
+      <i class="fa fa-search"></i>
+     -->  
+ 
+</header>
+
+
+<script>
+// Function to load HTML into an element
+function includeHTML(id, file) {
+    fetch(file)
+        .then(response => {
+            if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+            return response.text();
+        })
+        .then(data => {
+            document.getElementById(id).innerHTML = data;
+        })
+        .catch(err => {
+            console.error('Error loading file:', err);
+        });
+}
+
+
+includeHTML("ulo", "30-ulo.html");
+</script>
+
+
+<script>
+
+// Accordion 
+function myAccFunc() {
+  var x = document.getElementById("demoAcc");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+// Click on the "Jeans" link on page load to open the accordion for demo purposes
+document.getElementById("myBtn").click();
+
+
+// Open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+</script>
+
+
+</body>
+</html>

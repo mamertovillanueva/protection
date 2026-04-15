@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -25,77 +26,31 @@
   h4 {text-align: center;}
   h5 {text-align: center; color: red;}
   </style>
-  
-  
 </head>
-<body class="w3-content" style="max-width:1200px">
 
-<!-- Sidebar/menu -->
-<nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3;width:250px" id="mySidebar">
-  <div class="w3-container w3-display-container w3-padding-16">
-    <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
-    <h3 class="w3-wide"><b>Life of Jesus and Mary</b></h3>
-  </div>
-  
-   <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold">
-    <!-- 
-<a href="#home" class="w3-bar-item w3-button">Home</a>
-      <a href="#rosary" class="w3-bar-item w3-button">Rosary</a>
-    
- --> <a href="slideshow.php" class="w3-bar-item w3-button">Home</a> 
-       
-      <a href="protection.html" class="w3-bar-item w3-button">Prayer for Protection</a>
-      <a href="siete_palabras.html" class="w3-bar-item w3-button">Siete Palabras</a>
-     <a href="deliverance.html" class="w3-bar-item w3-button">Deliverance</a>
-     <a onclick="myAccFunc()" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
-       Sin and Trauma <i class="fa fa-caret-down"></i>
-     </a>
-     <div id="demoAcc" class="w3-bar-block w3-hide w3-padding-large w3-medium">
-     
-     
-     <!-- 
-   <a href="#" class="w3-bar-item w3-button w3-light-grey"><i class="fa fa-caret-right w3-margin-right"></i>Sins Trauma</a>
-     
-  -->  
-       <a href="01-occult.html" class="w3-bar-item w3-button">Occult</a>
-       <a href="02-wholeness_in_marriage.html" class="w3-bar-item w3-button">Wholeness Marriage</a>
-       <a href="03-healing_the_children.html" class="w3-bar-item w3-button">Healing the Children</a>
-       <a href="04-sexual_healing.html" class="w3-bar-item w3-button">Sexual Healing</a>
-       <a href="05-mental_health.html" class="w3-bar-item w3-button">Mental Health</a>
-       <a href="06-fears.html" class="w3-bar-item w3-button">Fears</a>
-       <a href="07-healing_compulsive.html" class="w3-bar-item w3-button">Healing Compulsive</a>
-       <a href="08-healing_all_the_diseases.html" class="w3-bar-item w3-button">Healing all the diseases</a>
-       <a href="09-crimes.html" class="w3-bar-item w3-button">Crimes</a>
-       <a href="10-lovers_not_haters.html" class="w3-bar-item w3-button">Lovers Not Haters</a>
-       <a href="11-a_tender_loving_care.html" class="w3-bar-item w3-button">A Tender Loving Care</a>
-       <a href="12-make_us_a_family.html" class="w3-bar-item w3-button">Make Us A Family</a>
-       <a href="13-slavery.html" class="w3-bar-item w3-button">Slavery</a>
-       <a href="14-serving.html" class="w3-bar-item w3-button">Serving Only One God</a>
-       <a href="15-healing_the_tounge.html" class="w3-bar-item w3-button">Healing the Tounge</a>
-       <a href="16-ax.html" class="w3-bar-item w3-button">Ax to the Foot</a>
-       <a href="17-rebellion.html" class="w3-bar-item w3-button">Rebellion</a>
-       <a href="18-barbarism.html" class="w3-bar-item w3-button">Barbarism</a>
-       <a href="19-gluttony.html" class="w3-bar-item w3-button">Gluttony</a>
-       <a href="20-family_conflict.html" class="w3-bar-item w3-button">Family Conflict</a>
-       </div>
-     <!-- <a href="#occult" class="w3-bar-item w3-button"></a> -->
-     <a href="mysteries.html" class="w3-bar-item w3-button">Mysteries</a>
-     <a href="apostle.html" class="w3-bar-item w3-button">Apostle Creed</a>
-     <a href="nicene.html" class="w3-bar-item w3-button">Nicene Creed</a>
-     <a href="pio.html" class="w3-bar-item w3-button">Prayer of Fr. Pio</a>
-   </div>
- 
-</nav>
+<script>
+// Function to load HTML into an element
+function includeHTML(id, file) {
+    fetch(file)
+        .then(response => {
+            if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+            return response.text();
+        })
+        .then(data => {
+            document.getElementById(id).innerHTML = data;
+        })
+        .catch(err => {
+            console.error('Error loading file:', err);
+        });
+}
 
-<!-- Top menu on small screens -->
-<header class="w3-bar w3-top w3-hide-large w3-black w3-xlarge">
-  <div class="w3-bar-item w3-padding-24 w3-wide">Life of Jesus and Mary</div>
-  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></a>
-</header>
 
-<!-- Overlay effect when opening sidebar on small screens -->
-<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+includeHTML("ulo", "30-ulo.html");
+</script>
 
+<div id="ulo"></div>
+
+</script>
 <!-- !PAGE CONTENT! -->
 <div class="w3-main" style="margin-left:250px">
 
